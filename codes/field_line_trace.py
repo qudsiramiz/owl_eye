@@ -18,6 +18,9 @@ plt.rc("font", **font)
 plt.rc("text", usetex=True)
 plt.rc("text.latex", preamble=r"\usepackage{color}")
 
+# Set the dark mode for the plots
+plt.style.use("dark_background")
+
 today_date = datetime.datetime.today().strftime("%Y-%m-%d")
 
 s = sched.scheduler(time.time, time.sleep)

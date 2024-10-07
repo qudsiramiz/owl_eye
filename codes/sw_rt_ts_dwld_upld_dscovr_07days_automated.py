@@ -107,7 +107,9 @@ def plot_figures_dsco_07days(number_of_days=30):
     except Exception:
         print("No files to unzip\n")
 
-    os.chdir("/home/vetinari/Desktop/git/owl_eye/codes/")
+    # Get the username and change the directory to the codes directory
+    username = os.getlogin()
+    os.chdir(f"/home/{username}/Desktop/git/owl_eye/codes/")
 
     plas_file_list = np.sort(glob.glob(f"{data_dir}/oe_f1m_*.nc"))[-number_of_days:]
     mag_file_list = np.sort(glob.glob(f"{data_dir}/oe_m1m_*.nc"))[-number_of_days:]
